@@ -39,13 +39,13 @@ div.box2 {
 
 div.zentai2 {
     display: grid;                      /* グリッドレイアウトにする*/
-    grid-template-columns: 1fr 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
-    grid-template-rows: 200px 100px 100px 100px;    /* 2行にする．高さはともに 100px */
-    grid-gap: 50px;                     /* 隣り合う行（列）の間隔を 10px に*/
+    grid-template-columns: 1fr 1fr 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
+    grid-template-rows: 300px 200px;    /* 2行にする．高さはともに 100px */
+    grid-gap: 20px;                     /* 隣り合う行（列）の間隔を 10px に*/
 
-    width: 500px;
+    width: 1800px;
 }
 
 div.box {
-    background: cyan;
+    background: lightcyan;
 }
