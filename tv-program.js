@@ -83,3 +83,5 @@ let data = {
 for(let n of data.list.g1){
   console.log(n.title);
 }
+
+
