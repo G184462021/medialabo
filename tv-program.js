@@ -86,4 +86,4 @@ for(let n of data.list.g1){
 }
 
 
-s.textContent = data;
+
