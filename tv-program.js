@@ -80,8 +80,10 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
+let s = document.querySelector('p#narabi');
 for(let n of data.list.g1){
-  console.log(n.title);
+  s.textContent = n.title;
 }
 
 
+s.textContent = data;
