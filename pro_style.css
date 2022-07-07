@@ -1,0 +1,22 @@
+h1 {
+    margin: 10px;
+    box-shadow: 10px 5px 5px  rgb(218, 68, 63);
+    padding: 5px 5px 5px 5px;
+  }
+
+div.jyan{
+  display: flex;
+}
+
+div.box1 {
+  flex: 2;                /* 横幅2で表示 */
+
+  background-color:lightcyan;
+  margin-left: 5px;
+}
+div.box2 {
+  flex: 2;                /* 横幅2で表示 */
+
+  background-color: lightcyan;
+  margin-left: 5px;
+}

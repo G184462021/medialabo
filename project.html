@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>My test page</title>
-    <link rel="stylesheet" href="pro_style.css">
-    <script src="tv-program.js" defer></script>
-  </head>
-  <body>
-<h1>番組表</h1>
-<h2>チャンネル:NHK</h2>
-<p id="narabi"></p>
+
+<head>
+  <meta charset="utf-8">
+  <title>My test page</title>
+  <link rel="stylesheet" href="pro_style.css">
+  <script src="tv-program.js" defer></script>
+</head>
+
+<body>
+  <h1>番組表</h1>
+  <h2><label for="チャンネル名">チャンネル名: </label>
+    <input type="text" name="チャンネル名" size="10">
+    <label for="ジャンル">ジャンル: </label>
+    <input type="text" name="ジャンル" size="10">
+    <button id="print">表示</button>
+  </h2>
+  <div class="jyan">
+    <div class="box1">
+      <h2>チャンネル一覧</h2>
+      <ul>
+        <li>NHK総合1</li>
+        <li>Eテレ1</li>
+      </ul>
+      </ul>
+    </div>
+    <div class="box2">
+      <h2>ジャンル一覧</h2>
+      <ul>
+        <li> 0000 ... ニュース・報道</li>
+        <li>0100 ... スポーツ</li>
+        <li>0205 ... 情報・ワイドショー</li>
+        <li>0300 ... ドラマ</li>
+        <li>0409 ... 音楽</li>
+        <li>0502 ... バラエティ</li>
+        <li>0600 ... 映画</li>
+        <li>0700 ... アニメ</li>
+        <li>0800 ... ドキュメンタリー・教養</li>
+        <li>0903 ... 劇場・公演</li>
+        <li>1000 ... 趣味・教育</li>
+        <li>1100 ... 福祉</li>
+    </div>
+  </div>
+
+  <p id="narabi"></p>
 </body>
+
 </html>

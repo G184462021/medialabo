@@ -82,8 +82,11 @@ let data = {
 /////////////////// 課題3-2 はここから書き始めよう
 let s = document.querySelector('p#narabi');
 for(let n of data.list.g1){
-  s.textContent = n.title;
+  let p = document.createElement('p');
+  p.textContent =  n.title;
+  s.insertAdjacentElement('beforeend',p);
 }
+
 
 
 
