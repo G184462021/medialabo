@@ -80,12 +80,35 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-let s = document.querySelector('p#narabi');
+/*let s = document.querySelector('p#narabi');
 for(let n of data.list.g1){
   let p = document.createElement('p');
   p.textContent =  n.title;
   s.insertAdjacentElement('beforeend',p);
+}*/
+
+
+
+
+function hantei(){
+  let j = document.querySelector('select[name="channel"]');
+  let g = document.querySelector('select[name="ganre"]');
+  if(j==='g1'){
+    if(g==='0000'){
+      for(let n of data.list.g1){
+        let p = document.createElement('p');
+        if(data.list.g1.genres==="0000"){
+          p.textContent =  n.title;
+        }
+        
+        s.insertAdjacentElement('beforeend',p);
+      }
+    }
+  }
 }
+
+let b1 = document.querySelector('#print');
+b1.addEventListener('click', hantei);
 
 
 

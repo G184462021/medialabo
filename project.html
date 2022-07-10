@@ -10,10 +10,27 @@
 
 <body>
   <h1>番組表</h1>
-  <h2><label for="チャンネル名">チャンネル名: </label>
-    <input type="text" name="チャンネル名" size="10">
+  <h2>
+    <label for="チャンネル名">チャンネル名: </label>
+    <select name="channel">
+      <option value="g1">NHK総合1</option>
+      <option value="e1">Eテレ1</option>
+    </select>
     <label for="ジャンル">ジャンル: </label>
-    <input type="text" name="ジャンル" size="10">
+    <select name="ganre">
+      <option value="0000">ニュース・報道</option>
+      <option value="0100">スポーツ</option>
+      <option value="0205">情報・ワイドショー</option>
+      <option value="0300">ドラマ</option>
+      <option value="0409">音楽</option>
+      <option value="0502">バラエティ</option>
+      <option value="0600">映画</option>
+      <option value="0700">アニメ</option>
+      <option value="0800">ドキュメンタリー・教養</option>
+      <option value="0903">劇場・公演</option>
+      <option value="1000">趣味・教育</option>
+      <option value="1100">福祉</option>
+    </select>
     <button id="print">表示</button>
   </h2>
   <div class="jyan">
