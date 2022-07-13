@@ -112,7 +112,7 @@ function hantei() {
     }
   }
 }
-//console.log(n.genres);
+
 
 let b1 = document.querySelector('#print');
 b1.addEventListener('click', hantei);
