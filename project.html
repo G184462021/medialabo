@@ -18,7 +18,7 @@
       <option value='e1'>Eテレ1</option>
     </select>
     <label for='ジャンル'>ジャンル: </label>
-    <select id='ganre'>
+    <select id='genre'>
       <option value='0000'>ニュース・報道</option>
       <option value='0100'>スポーツ</option>
       <option value='0205'>情報・ワイドショー</option>
@@ -34,7 +34,7 @@
     </select>
     <button id="print">表示</button>
   </h2>
-  <div class="jyan">
+  
     <div class="box1">
       <h2>チャンネル一覧</h2>
       <ul>
@@ -59,17 +59,65 @@
         <li>1000 ... 趣味・教育</li>
         <li>1100 ... 福祉</li>
     </div>
-  </div>
-
   
- <div class="zentai"> 
-   <div class="midasi">開始時刻</div><div class="naiyou"><p id="Start"></p></div>
-   <div class="midasi">終了時刻</div><div class="naiyou"><p id="End"></p></div>
-   <div class="midasi">タイトル</div><div class="naiyou"><p id ="Title"></p></div>
-   <div class="midasi">サブタイトル</div><div class="naiyou"><p id="SUBtitle"></p></div>
-   <div class="midasi">内容</div><div class="naiyou"><p id="Content"></p></div>
-   <div class="midasi">出演者</div><div class="naiyou"><p id ="Act"></p></div>
- </div>
+
+
+  <table border="1" width="100%">
+    <tr>
+      <th>
+        <div class="midasi1">開始時刻</div>
+      </th>
+      <th>
+        <div class="midasi1">終了時刻</div>
+      </th>
+      <th>
+        <div class="midasi2">タイトル</div>
+      </th>
+      <th>
+        <div class="midasi2">サブタイトル</div>
+      </th>
+      <th>
+        <div class="midasi2">内容</div>
+      </th>
+      <th>
+        <div class="midasi2">出演者</div>
+      </th>
+    </tr>
+
+    <tr>
+      <td>
+        
+          <p id="Start"></p>
+        
+      </td>
+      <td>
+      
+        <p id="End"></p>
+      
+      </td>
+      <td>
+      
+        <p id="Title"></p>
+      
+      </td>
+      <td>
+      
+        <p id="SUBtitle"></p>
+      
+      </td>
+      <td>
+      
+        <p id="Content"></p>
+      
+      </td>
+      <td>
+      
+        <p id="Act"></p>
+      
+      </td>
+    </tr>
+
+  </table>
 </body>
 
 </html>

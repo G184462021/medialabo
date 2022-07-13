@@ -93,24 +93,26 @@ let s6 = document.querySelector('p#Act');
 
 
 function hantei() {
-  const Cha = document.getElementById('channel').value;
-  const Gan = document.getElementById('ganre').value;
+  const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
+  const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
 
   if (Cha === 'g1') {
     if (Gan === "0000") {
       for (let n of data.list.g1) {
         let p = document.createElement('p');
         
-        //console.log(n.genres);
-        p.textContent = n.title;
+        if(n.genres==='0000'){
+          p.textContent = n.title;
         s3.insertAdjacentElement('beforeend', p);
+        }
+        
       }
 
 
     }
   }
 }
-
+//console.log(n.genres);
 
 let b1 = document.querySelector('#print');
 b1.addEventListener('click', hantei);
