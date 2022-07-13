@@ -1,23 +1,32 @@
+body {
+    background-color: rgba(255, 236, 213, 0.333);
+}
+
 h1 {
     margin: 0px;
-    box-shadow: 10px 5px 5px  lightsalmon;
-  }
+    background-color: rgb(122, 224, 255);
+    border-radius: 25px 0px 0px 25px;
 
-  a:hover {
+}
+
+a:hover {
     text-decoration: none;
-    color:red;
-  }
+    color: red;
+}
 
-h2{
+h2 {
     background-color: lightgoldenrodyellow;
 }
-h3{
+
+h3 {
     border-bottom: thick double #32a1ce;
 }
 
 div.zentai {
-    display: flex;          /* フレックスボックスにする */
-    flex-direction: row;    /* 横向きに表示（column に変更すると縦向きに表示） */
+    display: flex;
+    /* フレックスボックスにする */
+    flex-direction: row;
+    /* 横向きに表示（column に変更すると縦向きに表示） */
 
     width: 1400px;
     border: 4mm ridge lightgreen;
@@ -25,32 +34,43 @@ div.zentai {
 }
 
 div.box1 {
-    flex: 2;                /* 横幅2で表示 */
+    flex: 2;
+    /* 横幅2で表示 */
 
-    background-color:lightcyan;
+    background-color: lightcyan;
     margin-left: 5px;
 }
+
 div.box2 {
-    flex: 2;                /* 横幅2で表示 */
+    flex: 2;
+    /* 横幅2で表示 */
 
     background-color: lightcyan;
     margin-left: 5px;
 }
 
 div.zentai2 {
-    display: grid;                      /* グリッドレイアウトにする*/
-    grid-template-columns: 1fr 1fr 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
-    grid-template-rows: 300px 200px;    /* 2行にする．高さはともに 100px */
-    grid-gap: 20px;                     /* 隣り合う行（列）の間隔を 10px に*/
+    display: grid;
+    /* グリッドレイアウトにする*/
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* 3列にする．幅は 1:2:2 の比率*/
+    grid-template-rows: 300px 200px;
+    /* 2行にする．高さはともに 100px */
+    grid-gap: 20px;
+    /* 隣り合う行（列）の間隔を 10px に*/
 
     width: 1500px;
 }
 
 div.zentai3 {
-    display: grid;                      /* グリッドレイアウトにする*/
-    grid-template-columns: 1fr 1fr; /* 3列にする．幅は 1:2:2 の比率*/
-    grid-template-rows: 200px 200px;    /* 2行にする．高さはともに 100px */
-    grid-gap: 20px;                     /* 隣り合う行（列）の間隔を 10px に*/
+    display: grid;
+    /* グリッドレイアウトにする*/
+    grid-template-columns: 1fr 1fr;
+    /* 3列にする．幅は 1:2:2 の比率*/
+    grid-template-rows: 200px 200px;
+    /* 2行にする．高さはともに 100px */
+    grid-gap: 20px;
+    /* 隣り合う行（列）の間隔を 10px に*/
 
     width: 1500px;
 }

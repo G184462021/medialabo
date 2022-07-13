@@ -72,7 +72,7 @@ let data = {
         "content": "パラスポーツの魅力をアニメで伝えるプロジェクトの第１３弾。圧倒的なスピードに挑む「パラアルペンスキー」の世界を江口寿史原案の魅力的なキャラクターで描く。平昌パラリンピック金メダリストの村岡桃佳選手への取材から生まれた主人公・桃は、スピードへの恐怖を克服していく。その壁を越えた先にあるものとは…　テーマ曲　♪「Ｏｎ　Ｙｏｕｒ　Ｍａｒｋ」はＡｗｅｓｏｍｅ　Ｃｉｔｙ　Ｃｌｕｂが手掛けた。",
         "act": "【声】松本まりか，【出演】Ａｗｅｓｏｍｅ　Ｃｉｔｙ　Ｃｌｕｂ，【監督】西村一彦，【脚本】加納新太，【原案】江口寿史",
         "genres": [
-          "0700"
+          "0000"
         ]
       }
     ]
@@ -80,32 +80,37 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-/*let s = document.querySelector('p#narabi');
-for(let n of data.list.g1){
-  let p = document.createElement('p');
-  p.textContent =  n.title;
-  s.insertAdjacentElement('beforeend',p);
-}*/
+let s1 = document.querySelector('p#Start');
+let s2 = document.querySelector('p#End');
+let s3 = document.querySelector('p#Title');
+let s4 = document.querySelector('p#SUBtitle');
+let s5 = document.querySelector('p#Content');
+let s6 = document.querySelector('p#Act');
 
 
 
 
-function hantei(){
-  let j = document.querySelector('select[name="channel"]');
-  let g = document.querySelector('select[name="ganre"]');
-  if(j==='g1'){
-    if(g==='0000'){
-      for(let n of data.list.g1){
+
+
+function hantei() {
+  const Cha = document.getElementById('channel').value;
+  const Gan = document.getElementById('ganre').value;
+
+  if (Cha === 'g1') {
+    if (Gan === "0000") {
+      for (let n of data.list.g1) {
         let p = document.createElement('p');
-        if(data.list.g1.genres==="0000"){
-          p.textContent =  n.title;
-        }
         
-        s.insertAdjacentElement('beforeend',p);
+        //console.log(n.genres);
+        p.textContent = n.title;
+        s3.insertAdjacentElement('beforeend', p);
       }
+
+
     }
   }
 }
+
 
 let b1 = document.querySelector('#print');
 b1.addEventListener('click', hantei);

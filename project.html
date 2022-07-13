@@ -5,31 +5,32 @@
   <meta charset="utf-8">
   <title>My test page</title>
   <link rel="stylesheet" href="pro_style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
   <script src="tv-program.js" defer></script>
 </head>
 
 <body>
   <h1>番組表</h1>
   <h2>
-    <label for="チャンネル名">チャンネル名: </label>
-    <select name="channel">
-      <option value="g1">NHK総合1</option>
-      <option value="e1">Eテレ1</option>
+    <label for='チャンネル名'>チャンネル名: </label>
+    <select id='channel'>
+      <option value='g1'>NHK総合1</option>
+      <option value='e1'>Eテレ1</option>
     </select>
-    <label for="ジャンル">ジャンル: </label>
-    <select name="ganre">
-      <option value="0000">ニュース・報道</option>
-      <option value="0100">スポーツ</option>
-      <option value="0205">情報・ワイドショー</option>
-      <option value="0300">ドラマ</option>
-      <option value="0409">音楽</option>
-      <option value="0502">バラエティ</option>
-      <option value="0600">映画</option>
-      <option value="0700">アニメ</option>
-      <option value="0800">ドキュメンタリー・教養</option>
-      <option value="0903">劇場・公演</option>
-      <option value="1000">趣味・教育</option>
-      <option value="1100">福祉</option>
+    <label for='ジャンル'>ジャンル: </label>
+    <select id='ganre'>
+      <option value='0000'>ニュース・報道</option>
+      <option value='0100'>スポーツ</option>
+      <option value='0205'>情報・ワイドショー</option>
+      <option value='0300'>ドラマ</option>
+      <option value='0409'>音楽</option>
+      <option value='0502'>バラエティ</option>
+      <option value='0600'>映画</option>
+      <option value='0700'>アニメ</option>
+      <option value='0800'>ドキュメンタリー・教養</option>
+      <option value='0903'>劇場・公演</option>
+      <option value='1000'>趣味・教育</option>
+      <option value='1100'>福祉</option>
     </select>
     <button id="print">表示</button>
   </h2>
@@ -60,7 +61,15 @@
     </div>
   </div>
 
-  <p id="narabi"></p>
+  
+ <div class="zentai"> 
+   <div class="midasi">開始時刻</div><div class="naiyou"><p id="Start"></p></div>
+   <div class="midasi">終了時刻</div><div class="naiyou"><p id="End"></p></div>
+   <div class="midasi">タイトル</div><div class="naiyou"><p id ="Title"></p></div>
+   <div class="midasi">サブタイトル</div><div class="naiyou"><p id="SUBtitle"></p></div>
+   <div class="midasi">内容</div><div class="naiyou"><p id="Content"></p></div>
+   <div class="midasi">出演者</div><div class="naiyou"><p id ="Act"></p></div>
+ </div>
 </body>
 
 </html>
