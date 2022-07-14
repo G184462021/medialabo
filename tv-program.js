@@ -80,14 +80,7 @@ let data = {
 };
 
 /////////////////// 課題3-2 はここから書き始めよう
-let s1 = document.querySelector('p#Start');
-let s2 = document.querySelector('p#End');
-let s3 = document.querySelector('p#Title');
-let s4 = document.querySelector('p#SUBtitle');
-let s5 = document.querySelector('p#Content');
-let s6 = document.querySelector('p#Act');
-
-
+let s1 = document.querySelector('tbody#b1');
 
 
 
@@ -96,68 +89,47 @@ function hantei() {
   const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
   const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
 
-  let pyoso1 = document.querySelectorAll('#Start p');
-for (const P of pyoso1) {
-	P.remove();
-}
-
-let pyoso2 = document.querySelectorAll('#End p');
-for (const P of pyoso2) {
-	P.remove();
-}
-
-  let pyoso3 = document.querySelectorAll('#Title p');
-for (const P of pyoso3) {
-	P.remove();
-}
-
-let pyoso4 = document.querySelectorAll('#SUBtitle p');
-for (const P of pyoso4) {
-	P.remove();
-}
-
-let pyoso5 = document.querySelectorAll('#Content p');
-for (const P of pyoso5) {
-	P.remove();
-}
-
-let pyoso6 = document.querySelectorAll('#Act p');
-for (const P of pyoso6) {
-	P.remove();
-}
+  let pyoso1 = document.querySelectorAll('td');
+  for (const P of pyoso1) {
+    P.remove();
+  }
 
 
 
- if (data.list[Cha]) {
 
-for (let n of data.list[Cha]) {
+  if (data.list[Cha]) {
 
-  if (n.genres.includes(Gan)) {
-    let p1 = document.createElement('p');
-    p1.textContent = n.end_time;
-    s1.insertAdjacentElement('beforeend', p1);
+    for (let n of data.list[Cha]) {
 
-    let p2 = document.createElement('p');
-    p2.textContent = n.start_time;
-    s2.insertAdjacentElement('beforeend', p2);
+      if (n.genres.includes(Gan)) {
+        let q1 = document.createElement('tr');
+        let p1 = document.createElement('td');
 
-    let p3 = document.createElement('p');
-    p3.textContent = n.title;
-    s3.insertAdjacentElement('beforeend', p3);
+        p1.textContent = n.start_time;
+        s1.insertAdjacentElement('beforeend', q1);
+        s1.insertAdjacentElement('beforeend', p1);
 
-    let p4 = document.createElement('p');
-    p4.textContent = n.subtitle;
-    s4.insertAdjacentElement('beforeend', p4);
+        let p2 = document.createElement('td');
+        p2.textContent = n.end_time;
+        s1.insertAdjacentElement('beforeend', p2);
 
-    let p5 = document.createElement('p');
-    p5.textContent = n.content;
-    s5.insertAdjacentElement('beforeend', p5);
+        let p3 = document.createElement('td');
+        p3.textContent = n.title;
+        s1.insertAdjacentElement('beforeend', p3);
 
-    let p6 = document.createElement('p');
-    p6.textContent = n.act;
-    s6.insertAdjacentElement('beforeend', p6);
+        let p4 = document.createElement('td');
+        p4.textContent = n.subtitle;
+        s1.insertAdjacentElement('beforeend', p4);
 
-     }
+        let p5 = document.createElement('td');
+        p5.textContent = n.content;
+        s1.insertAdjacentElement('beforeend', p5);
+
+        let p6 = document.createElement('td');
+        p6.textContent = n.act;
+        s1.insertAdjacentElement('beforeend', p6);
+
+      }
 
     }
 
@@ -165,7 +137,7 @@ for (let n of data.list[Cha]) {
 
 }
 
- 
+
 
 
 let b1 = document.querySelector('#print');

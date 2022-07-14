@@ -26,7 +26,7 @@ div.box2 {
 
 
 div.midasi1 {
-  flex: 1; 
+   
   font-size: 18px;
   margin:0px;
   font-weight: bold;
@@ -35,7 +35,7 @@ div.midasi1 {
 }
 
 div.midasi2 {
-  flex: 2; 
+   
   font-size: 18px;
   margin:0px;
   font-weight: bold;
@@ -45,7 +45,9 @@ div.midasi2 {
 table{
   
   padding: .25rem .25rem .25rem .25rem;
-  border-collapse: separate;
+  
+  display: table;
+  table-layout: fixed;
   
   
 }
@@ -53,7 +55,7 @@ th{
   background-color:lightcyan;
 }
 
-td, th{
+table,td, th{
   border: 1px solid black;
 }
 
