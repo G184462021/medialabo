@@ -35,7 +35,7 @@ let data = {
         "act": "",
         "genres": [
           "0409",
-          "0700",
+          "0000",
           "0504"
         ]
       },
@@ -96,22 +96,76 @@ function hantei() {
   const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
   const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
 
-  if (Cha === 'g1') {
-    if (Gan === "0000") {
-      for (let n of data.list.g1) {
-        let p = document.createElement('p');
-        
-        if(n.genres==='0000'){
-          p.textContent = n.title;
-        s3.insertAdjacentElement('beforeend', p);
-        }
-        
-      }
+  let pyoso1 = document.querySelectorAll('#Start p');
+for (const P of pyoso1) {
+	P.remove();
+}
 
+let pyoso2 = document.querySelectorAll('#End p');
+for (const P of pyoso2) {
+	P.remove();
+}
+
+  let pyoso3 = document.querySelectorAll('#Title p');
+for (const P of pyoso3) {
+	P.remove();
+}
+
+let pyoso4 = document.querySelectorAll('#SUBtitle p');
+for (const P of pyoso4) {
+	P.remove();
+}
+
+let pyoso5 = document.querySelectorAll('#Content p');
+for (const P of pyoso5) {
+	P.remove();
+}
+
+let pyoso6 = document.querySelectorAll('#Act p');
+for (const P of pyoso6) {
+	P.remove();
+}
+
+
+
+ if (data.list[Cha]) {
+
+for (let n of data.list[Cha]) {
+
+  if (n.genres.includes(Gan)) {
+    let p1 = document.createElement('p');
+    p1.textContent = n.end_time;
+    s1.insertAdjacentElement('beforeend', p1);
+
+    let p2 = document.createElement('p');
+    p2.textContent = n.start_time;
+    s2.insertAdjacentElement('beforeend', p2);
+
+    let p3 = document.createElement('p');
+    p3.textContent = n.title;
+    s3.insertAdjacentElement('beforeend', p3);
+
+    let p4 = document.createElement('p');
+    p4.textContent = n.subtitle;
+    s4.insertAdjacentElement('beforeend', p4);
+
+    let p5 = document.createElement('p');
+    p5.textContent = n.content;
+    s5.insertAdjacentElement('beforeend', p5);
+
+    let p6 = document.createElement('p');
+    p6.textContent = n.act;
+    s6.insertAdjacentElement('beforeend', p6);
+
+     }
 
     }
+
   }
+
 }
+
+ 
 
 
 let b1 = document.querySelector('#print');
