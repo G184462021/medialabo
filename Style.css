@@ -28,9 +28,9 @@ div.zentai {
     flex-direction: row;
     /* 横向きに表示（column に変更すると縦向きに表示） */
 
-    width: 1400px;
+    width: 100%;
     border: 4mm ridge lightgreen;
-    padding: 5px 5px 5px 5px;
+    padding: 5px 5px 0px 5px;
 }
 
 div.box1 {
@@ -59,7 +59,7 @@ div.zentai2 {
     grid-gap: 20px;
     /* 隣り合う行（列）の間隔を 10px に*/
 
-    width: 1500px;
+    width: 100%;
 }
 
 div.zentai3 {
@@ -72,7 +72,7 @@ div.zentai3 {
     grid-gap: 20px;
     /* 隣り合う行（列）の間隔を 10px に*/
 
-    width: 1500px;
+    width: 100%;
 }
 
 div.box {
