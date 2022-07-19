@@ -1,7 +1,11 @@
+body{
+  background-color: beige;
+}
 h1 {
     margin: 10px;
-    box-shadow: 10px 5px 5px  rgb(218, 68, 63);
+    background: rgb(149, 173, 234);
     padding: 5px 5px 5px 5px;
+    color: white;
   }
   div.jyan{
     display: flex;
