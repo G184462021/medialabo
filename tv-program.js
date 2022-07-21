@@ -1,4 +1,4 @@
-let data = {
+/*let data = {
   "list": {
     "g1": [
       {
@@ -77,27 +77,65 @@ let data = {
       }
     ]
   }
-};
+};*/
 
 /////////////////// 課題3-2 はここから書き始めよう
 let s1 = document.querySelector('tbody#b1');
 
 
 
-
-function hantei() {
+  
+function sendRequest(){
+  
   const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
   const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
 
-  let pyoso1 = document.querySelectorAll('td');
-  for (const P of pyoso1) {
-    P.remove();
+  //urlを指定
+  let url='https://www.nishita-lab.org/web-contents/jsons/nhk/'+Cha+'-'+Gan+'-j.json';
+  
+  // 通信開始
+
+  axios.get(url)
+  .then(hantei)   // 通信成功
+  .catch(showError)   // 通信失敗
+  .then(finish);      // 通信の最後の処理
+}
+
+
+
+
+function hantei(resp) {
+  const Cha = document.getElementById('channel').value;//検索欄のチャンネル名の値を取得
+  const Gan = document.getElementById('genre').value;//検索欄のジャンル名の値を取得
+
+
+    // サーバから送られてきたデータを出力
+    let data = resp.data;
+
+    // data が文字列型なら，オブジェクトに変換する
+    if (typeof data === 'string') {
+        data = JSON.parse(data);
+    }
+
+  let pyoso1 = document.querySelectorAll('td');//td要素を取得する
+  for (let TD of pyoso1) {
+    TD.remove();
   }
+  let TR = document.querySelectorAll('tr');
+  for (let T of TR) {
+    T.remove();
+  }
+  
 
 
 
 
-  if (data.list[Cha]) {
+
+if(data===null){
+  let aaa = document.createElement('p');
+  aaa.textContent ='検索結果に合う番組はありませんでした.';
+  s1.insertAdjacentElement('beforeend', aaa);
+}else if(data.list[Cha]) {
 
     for (let n of data.list[Cha]) {
 
@@ -135,13 +173,24 @@ function hantei() {
 
   }
 
+  }
+
+
+
+
+// 通信エラーが発生した時の処理
+function showError(err) {
+  console.log(err);
+}
+
+// 通信の最後にいつも実行する処理
+function finish() {
+  console.log('Ajax 通信が終わりました');
 }
 
 
-
-
 let b1 = document.querySelector('#print');
-b1.addEventListener('click', hantei);
+b1.addEventListener('click', sendRequest);
 
 
 
